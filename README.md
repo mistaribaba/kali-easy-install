@@ -33,7 +33,8 @@ chmod +x install.sh
 ```
 ## 📸 Visual Showcase
 <p align="center">
-  <img width="1366" height="768" alt="Screenshot_2025-12-23_22_16_23" src="https://github.com/user-attachments/assets/0a156499-0938-4d14-9a79-e53c84b79d14" />
+  <img width="1143" height="410" alt="Screenshot_2026-05-26_03-46-10" src="https://github.com/user-attachments/assets/a25ca426-941a-4984-8fed-29601cb66754" />
+
   <br>
     <i>Interactive Terminal Setup & Auto-Installer</i>
 </p>

@@ -5,7 +5,7 @@ import webbrowser
 import os
 import sys
 import time
-
+ 
 # --- Configure the Futuristic Theme ---
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")

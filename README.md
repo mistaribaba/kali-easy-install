@@ -30,3 +30,28 @@ git clone https://github.com/mistaribaba/kali-easy-install.git
 cd kali-easy-install
 chmod +x install.sh
 ./install.sh
+
+## 📸 Visual Showcase
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1cf3c634-2caf-4840-ad12-f8e2add22dfd" width="80%" alt="Terminal UI">
+  <br>
+  <i>Interactive Terminal Setup & Auto-Installer</i>
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/606b61c7-7eb1-43a4-89cd-3a922431ab1d" width="80%" alt="Main App Interface">
+  <br>
+  <i>Modern Graphical User Interface (GUI)</i>
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a1687e26-8a83-4868-a311-38f2ede3abb9" width="80%" alt="Package Manager View">
+  <br>
+  <i>Live Package Tracking & Management</i>
+</p>
+

@@ -1,0 +1,116 @@
+=======================================================
+ Kali Easy Install – Installation & Usage Guide
+ Author: Kunal Mistari
+ GitHub: https://github.com/mistaribaba
+=======================================================
+
+This guide walks you through installing and using the
+Kali Easy Install application on Kali Linux.
+
+-------------------------------------------------------
+ 1. Prerequisites
+-------------------------------------------------------
+- Kali Linux (or any Debian‑based distribution)
+- Internet connection
+- At least 200 MB free disk space
+
+-------------------------------------------------------
+ 2. Download the Repository
+-------------------------------------------------------
+Open a terminal and run:
+
+    git clone https://github.com/mistaribaba/kali-easy-install.git
+    cd kali-easy-install
+
+If you don’t have `git` installed, install it first:
+
+    sudo apt update
+    sudo apt install git -y
+
+-------------------------------------------------------
+ 3. Run the Installer
+-------------------------------------------------------
+Make the installer executable and run it:
+
+    chmod +x install.sh
+    ./install.sh
+
+What the installer does automatically:
+- Checks if Python 3.11+ is installed.
+- If Python or required packages (python3-venv, python3-tk) are missing,
+  it will ask you: “Do you want to automatically download and install?”
+  → Type `y` and press Enter. (You may be asked for your sudo password.)
+- Creates a virtual environment (`kali-app-env`).
+- Installs the `customtkinter` library inside that environment.
+- Asks: “Create a desktop shortcut?” → Type `y` to get an icon on your Desktop.
+- The desktop shortcut will be trusted so you can double‑click it directly.
+
+-------------------------------------------------------
+ 4. Launch the Application
+-------------------------------------------------------
+After the installer finishes, you have two ways to start the app:
+
+ A) From the Desktop:
+    → Double‑click the `Kali Easy Install` icon on your Desktop.
+    → If asked “Do you want to run this?” → click “Trust and Launch”.
+
+ B) From the terminal (if you skipped the shortcut):
+    → `source kali-app-env/bin/activate && python3 app.py`
+
+-------------------------------------------------------
+ 5. Using the App
+-------------------------------------------------------
+- To install a .deb package:
+    * Click the "Installer" tab.
+    * Click "Browse" and select a .deb file.
+    * Click "Initialize Installation (opens terminal)".
+    * Authenticate with your password when the PolicyKit dialog appears.
+    * Wait – a terminal shows the live apt output.
+    * After the installation finishes, a 10‑second timer appears.
+    * The terminal closes automatically (or click "Keep Open").
+
+- To uninstall a package:
+    * Click the "Uninstaller" tab.
+    * Click "Browse Apps" → type at least one letter → click on the package.
+    * Click "Purge Application (opens terminal)".
+    * Confirm removal.
+
+- To view the source code:
+    * Click the "Files" tab → "View Source Code".
+
+- To visit the developer’s GitHub:
+    * Click the "GitHub Profile" button in the sidebar.
+
+-------------------------------------------------------
+ 6. Troubleshooting
+-------------------------------------------------------
+| Issue                              | Solution                                                                 |
+|------------------------------------|---------------------------------------------------------------------------|
+| “grab failed: window not viewable” | Close and reopen the app. If it persists, run `rm ~/Desktop/kali-easy-install.desktop` and re‑run `./install.sh`. |
+| “No terminal emulator found”       | Install xterm: `sudo apt install xterm`                                   |
+| “dpkg was interrupted”             | Run `sudo dpkg --configure -a` in a terminal, then restart the app.       |
+| “Could not get lock”               | Another package manager is running. Close Synaptic, Software Center, etc. |
+| Shortcut does nothing / permission | Right‑click the desktop icon → Properties → Permissions → tick “Allow executing file as program”. |
+| Python version error               | Install Python 3.11 or higher: `sudo apt install python3 python3-venv python3-tk` |
+
+-------------------------------------------------------
+ 7. Uninstalling / Removing the App
+-------------------------------------------------------
+To completely remove the application and all its files:
+
+    rm -rf ~/Desktop/kali-easy-install.desktop
+    rm -rf kali-app-env
+    # (Optionally delete the repository folder)
+
+No system files are touched – everything stays inside the project folder.
+
+-------------------------------------------------------
+ 8. Getting Help
+-------------------------------------------------------
+- Check the built‑in “Help” tab inside the application.
+- Open an issue on GitHub: https://github.com/mistaribaba/kali-easy-install/issues
+- Visit the developer’s GitHub profile: https://github.com/mistaribaba
+
+=======================================================
+ Enjoy seamless package management on Kali Linux!
+=======================================================

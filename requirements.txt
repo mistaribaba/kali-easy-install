@@ -1,0 +1,2 @@
+customtkinter>=5.2.0
+Requires Python 3.13 or higher
